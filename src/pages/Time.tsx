@@ -5,8 +5,8 @@ const TimeGame: React.FC = () => {
   const [randomHour, setRandomHour] = useState(
     () => Math.floor(Math.random() * 12) + 1
   );
-  const [randomMinute, setRandomMinute] = useState(
-    () => Math.floor(Math.random() * 12) * 5
+  const [randomMinute, setRandomMinute] = useState(() =>
+    Math.floor(Math.random() * 60)
   );
   const [guessedHour, setGuessedHour] = useState("");
   const [guessedMinute, setGuessedMinute] = useState("");
@@ -15,7 +15,7 @@ const TimeGame: React.FC = () => {
 
   const generateNewTime = () => {
     setRandomHour(Math.floor(Math.random() * 12) + 1);
-    setRandomMinute(Math.floor(Math.random() * 12) * 5);
+    setRandomMinute(Math.floor(Math.random() * 60));
     setGuessedHour("");
     setGuessedMinute("");
     setFeedback(null);
@@ -181,7 +181,7 @@ const TimeGame: React.FC = () => {
           type="number"
           value={guessedMinute}
           onChange={(e) => setGuessedMinute(e.target.value)}
-          inputProps={{ min: 0, max: 59, step: 5 }}
+          inputProps={{ min: 0, max: 59 }}
           sx={{ width: 100 }}
         />
       </Box>
