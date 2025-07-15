@@ -101,12 +101,12 @@ const TimeGame: React.FC = () => {
               sx={{
                 position: "absolute",
                 width: "4px",
-                height: "15px",
+                height: "20px",
                 background: "#333",
                 left: "50%",
-                top: "8px",
-                transformOrigin: "bottom center",
-                transform: `translateX(-50%) rotate(${rotation}deg) translateY(110px)`,
+                top: "5px",
+                transformOrigin: "2px 120px",
+                transform: `translateX(-50%) rotate(${rotation}deg)`,
               }}
             />
           );
