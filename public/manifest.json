@@ -1,0 +1,31 @@
+{
+  "name": "Tutelage - Learning Games for Kids",
+  "short_name": "Tutelage",
+  "description": "Educational games to help kids learn time, math, and more",
+  "start_url": "/tutelage/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "games", "kids"],
+  "lang": "en-US"
+}

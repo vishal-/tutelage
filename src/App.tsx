@@ -6,6 +6,7 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import Header from "./organisms/Header";
+import InstallPrompt from "./components/InstallPrompt";
 import { AppRoutes } from "./app.config";
 
 function App() {
@@ -37,6 +38,8 @@ function App() {
               element={<Navigate to={AppRoutes["Home"].path} />}
             />
           </Routes>
+
+          <InstallPrompt />
         </Container>
       </HashRouter>
     </ThemeProvider>
