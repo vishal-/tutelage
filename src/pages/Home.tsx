@@ -1,5 +1,11 @@
+import TicTacToe from '../components/TicTacToe';
+
 const HomePage = () => {
-  return <div>{/* Empty home page component */}</div>;
+  return (
+    <div style={{ padding: '20px' }}>
+      <TicTacToe />
+    </div>
+  );
 };
 
 export default HomePage;
