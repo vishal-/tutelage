@@ -41,7 +41,10 @@ const Header = () => {
           {open ? <ChevronLeftIcon /> : <MenuIcon />}
         </IconButton>
 
-        <Typography variant="h5" sx={{ mx: 2, flexGrow: 1 }}>
+        <Typography
+          variant="h5"
+          sx={{ mx: 2, flexGrow: 1, textAlign: "center" }}
+        >
           {title}
         </Typography>
       </Box>
