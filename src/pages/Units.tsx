@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { units } from "../data/units";
 import { Button, Typography, Box, Paper } from "@mui/material";
 
@@ -9,7 +9,7 @@ const Units: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 
-  const loadNewUnit = useCallback(() => {
+  const loadNewUnit = () => {
     // Reset state
     setSelectedCategory(null);
     setIsCorrect(null);
@@ -24,11 +24,12 @@ const Units: React.FC = () => {
     const randomUnit =
       unitsInCategory[Math.floor(Math.random() * unitsInCategory.length)];
     setCurrentUnit(randomUnit);
-  }, [categories]);
+  };
 
   useEffect(() => {
     loadNewUnit();
-  }, [loadNewUnit]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);
