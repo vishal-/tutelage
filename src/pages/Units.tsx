@@ -3,11 +3,12 @@ import { units } from "../data/units";
 import { Button, Typography, Box, Paper } from "@mui/material";
 
 const Units: React.FC = () => {
-  const categories = Object.keys(units);
+  const allCategories = Object.keys(units);
   const [currentUnit, setCurrentUnit] = useState<string>("");
   const [correctCategory, setCorrectCategory] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+  const [randomizedCategories, setRandomizedCategories] = useState<string[]>([]);
 
   const loadNewUnit = () => {
     // Reset state
@@ -16,7 +17,7 @@ const Units: React.FC = () => {
 
     // Select random category
     const randomCategory =
-      categories[Math.floor(Math.random() * categories.length)];
+      allCategories[Math.floor(Math.random() * allCategories.length)];
     setCorrectCategory(randomCategory);
 
     // Select random unit from that category
@@ -24,6 +25,10 @@ const Units: React.FC = () => {
     const randomUnit =
       unitsInCategory[Math.floor(Math.random() * unitsInCategory.length)];
     setCurrentUnit(randomUnit);
+    
+    // Randomize the order of categories
+    const shuffled = [...allCategories].sort(() => Math.random() - 0.5);
+    setRandomizedCategories(shuffled);
   };
 
   useEffect(() => {
@@ -53,7 +58,7 @@ const Units: React.FC = () => {
           justifyContent: "center"
         }}
       >
-        {categories.map((category) => (
+        {randomizedCategories.map((category) => (
           <Button
             key={category}
             variant="contained"
