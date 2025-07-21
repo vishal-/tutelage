@@ -9,6 +9,6 @@ type AppRoutesType = {
   };
 };
 export const AppRoutes: AppRoutesType = {
-  Home: { path: "/", component: Home, title: "Home" },
+  Home: { path: "/", component: Home, title: "Choose your challenge" },
   Time: { path: "/time", component: Time, title: "What time is it?" }
 };
