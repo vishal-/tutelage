@@ -5,7 +5,7 @@ import {
   List,
   ListItem,
   ListItemButton,
-  Typography,
+  Typography
 } from "@mui/material";
 import { useMemo, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -21,13 +21,13 @@ const Header = () => {
 
   const toggleMenu = () => setOpen(!open);
 
-  const title = useMemo(
-    () =>
-      Object.keys(AppRoutes).find(
-        (route) => AppRoutes[route].path === pathname
-      ),
-    [pathname]
-  );
+  const title = useMemo(() => {
+    const selected = Object.keys(AppRoutes).find(
+      (route) => AppRoutes[route].path === pathname
+    );
+
+    return AppRoutes[selected as string].title;
+  }, [pathname]);
 
   const onChangePath = (path: string) => {
     navigate(path);

@@ -3,10 +3,10 @@ import {
   Container,
   createTheme,
   CssBaseline,
-  ThemeProvider,
+  ThemeProvider
 } from "@mui/material";
 import Header from "./organisms/Header";
-import InstallPrompt from "./components/InstallPrompt";
+import InstallPrompt from "./molecules/InstallPrompt";
 import { AppRoutes } from "./app.config";
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
     <ThemeProvider
       theme={createTheme({
         palette: {
-          mode: "dark",
-        },
+          mode: "dark"
+        }
       })}
     >
       <HashRouter>

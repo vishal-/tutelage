@@ -50,10 +50,6 @@ const TimeGame: React.FC = () => {
 
   return (
     <Box sx={{ textAlign: "center", p: 3 }}>
-      <Typography variant="h4" sx={{ mb: 3 }}>
-        What time is it?
-      </Typography>
-
       {/* Analog Clock */}
       <Box
         sx={{
@@ -64,7 +60,7 @@ const TimeGame: React.FC = () => {
           borderRadius: "50%",
           border: "3px solid #333",
           background: "#fff",
-          boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+          boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
         }}
       >
         {/* Clock numbers */}
@@ -84,7 +80,7 @@ const TimeGame: React.FC = () => {
                 top: "50%",
                 transform: `translate(${x - 8}px, ${y - 12}px)`,
                 fontWeight: "bold",
-                color: "#333",
+                color: "#333"
               }}
             >
               {number}
@@ -106,7 +102,7 @@ const TimeGame: React.FC = () => {
                 left: "50%",
                 top: "5px",
                 transformOrigin: "2px 120px",
-                transform: `translateX(-50%) rotate(${rotation}deg)`,
+                transform: `translateX(-50%) rotate(${rotation}deg)`
               }}
             />
           );
@@ -123,7 +119,7 @@ const TimeGame: React.FC = () => {
             bottom: "50%",
             transformOrigin: "bottom center",
             transform: `translateX(-50%) rotate(${hourDegrees}deg)`,
-            borderRadius: "3px",
+            borderRadius: "3px"
           }}
         />
 
@@ -138,7 +134,7 @@ const TimeGame: React.FC = () => {
             bottom: "50%",
             transformOrigin: "bottom center",
             transform: `translateX(-50%) rotate(${minuteDegrees}deg)`,
-            borderRadius: "2px",
+            borderRadius: "2px"
           }}
         />
 
@@ -152,7 +148,7 @@ const TimeGame: React.FC = () => {
             borderRadius: "50%",
             left: "50%",
             top: "50%",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-50%, -50%)"
           }}
         />
       </Box>
@@ -164,7 +160,7 @@ const TimeGame: React.FC = () => {
           display: "flex",
           gap: 2,
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "center"
         }}
       >
         <TextField
@@ -200,7 +196,12 @@ const TimeGame: React.FC = () => {
       {feedback && (
         <Alert
           severity={isCorrect ? "success" : "error"}
-          sx={{ mt: 3, maxWidth: 400, mx: "auto" }}
+          sx={{
+            mt: 3,
+            maxWidth: 400,
+            mx: "auto",
+            justifyContent: "center"
+          }}
         >
           {feedback}
         </Alert>
