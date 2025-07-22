@@ -2,7 +2,7 @@
   "name": "Tutelage - Learning Games for Kids",
   "short_name": "Tutelage",
   "description": "Educational games to help kids learn time, math, and more",
-  "start_url": "/tutelage/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1976d2",
